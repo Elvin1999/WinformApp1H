@@ -31,6 +31,15 @@ namespace WinformApp1
         {
             titleLbl.ForeColor = Color.Red;
             timer.Stop();
+
+
+            Label label = new Label();
+            label.Text = "New Label";
+            label.ForeColor = Color.Red;
+            label.Font = new Font("Comic Sans MS", 30, FontStyle.Italic);
+            label.Location = new Point(10, 150);
+            label.AutoSize = true;
+            this.Controls.Add(label);
         }
 
         private void Form1_DoubleClick(object sender, EventArgs e)
@@ -40,7 +49,7 @@ namespace WinformApp1
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show($"X : {e.Location.X}   Y : {e.Location.Y}");
+           // MessageBox.Show($"X : {e.Location.X}   Y : {e.Location.Y}");
             if (e.Button == MouseButtons.Left)
             {
                 this.BackColor = Color.AntiqueWhite;
@@ -49,6 +58,42 @@ namespace WinformApp1
             {
                 this.BackColor = Color.SpringGreen;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //button1.Dispose();
+
+            //var btn=sender as Button;
+            //btn.Dispose();
+
+            //Button button = new Button();
+            //button.Text = "Click Me";
+            //button.ForeColor = Color.Black;
+            //button.Font = new Font("Comic Sans MS", 22, FontStyle.Italic);
+
+            //Random random = new Random();
+
+            //int x = random.Next(0, this.Width - 100);
+            //int y = random.Next(0, this.Height - 100);
+
+            //button.Location = new Point(x, y);
+            //button.AutoSize = true;
+
+            //button.Click += button1_Click;
+
+            //this.Controls.Add(button);
+
+        }
+
+        private void button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            button1.BackColor = Color.Red;
+        }
+
+        private void button1_MouseUp(object sender, MouseEventArgs e)
+        {
+            button1.BackColor = Color.DeepSkyBlue;
         }
     }
 }
